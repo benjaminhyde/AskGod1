@@ -1,0 +1,157 @@
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+}
+ 
+body{
+     font-family: montserrat;
+     
+}
+nav{
+    background:#f30505;
+    height:80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height:80px;
+    padding:0 100px;
+    font-weight: bold;
+}
+nav ul{ 
+    float: right;
+    display: inline-block;
+margin: 20px;
+}
+nav ul li{ 
+    display: inline-block;
+    line-height:80px;
+    margin: 0 5px;
+
+}
+nav ul li a{
+    color:white;
+    font-size:17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform:uppercase;
+
+}
+a.active,a:hover{ 
+    background: #1b9cffe9;
+    transition: .5s; 
+
+}
+.checkbtn{
+    font-size: 30px;
+    color:rgb(247, 155, 155);
+    float:right;
+    line-height:80px;
+    margin-right:40px;
+    cursor: pointer;
+    display:none;
+}
+#check{
+    display:none;
+
+}
+@media(max-width:952px){
+    label.logo{
+        font-size:50px;
+        padding-left:16px;
+
+
+    }
+    @media(max-width:858px){
+        .checkbtn{ 
+            display: block;
+        }
+        ul{
+            position:fixed;
+            width:100%;
+            height:100vh;
+            background:#2c3e50;
+            top:80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+
+        }
+nav ul li a{
+    display:block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+nav ul li a{
+    font-size: 20px;
+}
+a:hover,a.active{
+    background: none;
+    color: #0082e6;
+
+}
+#check:checked ~ ul{
+    left: 0;
+} 
+    }
+}
+section{
+    background: url(windows-10-minimalism-background-4k-u3-3840x2160.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 70px);
+}
+.image{
+    width: 500px;
+    border-radius: 50PX;
+    margin: 50px;
+}
+.slider{
+    overflow: hidden;
+    height: 500px;
+    width: 1200px;
+    margin-left: 360px;
+    margin-top: 20p;
+}
+
+/*==========SLIDE ANIMATION==========*/
+@-webkit-keyframes slide_animation{
+        0%{left: 0px;}
+       10%{left: 0px;} 
+       20%{left: 1200px;}
+        30%{ left: 1200px;}
+        40%{left: 2400px;}
+         50%{left: 2400px;}
+        60%{ left: 1200px;}
+        70%{left: 1200px;}
+         80%{left: 0px;}
+         90%{left: 0px;}
+          100%{left: 0px;}
+}
+.slide-image{
+    width: 3600px;
+    height: 800px;
+    margin:0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation ;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-stage:runnig;
+}
+.img-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
+.slide-image{
+    background-color: #1c85ef;
+}
+.ben{
+    border-radius: 500px;
+    margin: 50px;
+}
